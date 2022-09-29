@@ -1,0 +1,132 @@
+.topo__pagina {
+    width: 100%;
+    background-color: var(--color-grey-5);
+    padding: 20px 16px;
+}
+
+.itens__topo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+.itens__topo>button {
+    background-color: var(--color-brand-1);
+    color: var(--fixed-white);
+    min-width: 270px;
+    border-radius: var(--radius-1);
+    border: 1.5px solid var(--color-brand-1);
+    padding: 3px;
+    font-size: var(--font-size-3);
+}
+
+.nome__titulo {
+    font-size: var(--font-size-1);
+    color: var(--color-brand-1);
+    font-weight: var(--font-weigth-1);
+    line-height: 24px;
+}
+
+.nome__titulo2 {
+    color: var(--color-grey-1);
+}
+
+.secao__financeiro {
+    margin: 1rem 0 0 1rem;
+}
+
+.secao__financeiro>h2 {
+    font-weight: var(--font-weigth-2);
+    font-size: var(--font-size-2);
+    line-height: 19px;
+}
+
+.span__filter {
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    margin-top: 1rem;
+
+}
+
+.span__filter>span {
+
+    border: 1.5px solid #F1F3F5;
+    background-color: var(--fixed-white);
+    border-radius: var(--radius-1);
+    font-size: var(--font-size-4);
+    font-weight: var(--font-weigth-1);
+    padding: 3px 14px;
+
+}
+
+.campo__soma {
+    width: 95%;
+    max-width: 688px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin: 2rem 2rem 0 0;
+    padding: 14px 16px;
+    background-color: var(--color-grey-4);
+    border-radius: var(--radius-2);
+    font-size: var(--font-size-4);
+    font-weight: var(--font-weigth-2);
+}
+
+.lista__valores {
+    margin: 1rem;
+}
+
+.container__lista {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.lista {
+    display: flex;
+    justify-content: space-between;
+    width: 98%;
+    background-color: var(--fixed-white);
+    border: 1.5px solid #F1F3F5;
+    border-radius: var(--radius-2);
+    padding: 1px 5px;
+}
+
+.lista>span {
+    font-size: var(--font-size-4);
+    font-weight: var(--font-weigth-2);
+    line-height: 25px;
+
+}
+
+.lista>button {
+    padding: 1px 7px;
+    border-radius: var(--radius-2);
+    background-color: var(--color-grey-4);
+    border: solid 1px var(--color-grey-4);
+    margin: 2px 0 2px 0;
+    font-size: var(--font-size-4);
+    font-weight: var(--font-weigth-2);
+
+}
+
+@media(min-width:768px) {
+    .itens__topo {
+        flex-direction: row;
+    }
+
+    .span__filter {
+        display: flex;
+        justify-content: end;
+        margin-right: 2.2rem;
+    }
+
+    .secao__financeiro>h2 {
+        position: absolute;
+        top: 98px;
+    }
+}

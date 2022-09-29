@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Control Finance</title>
+        <link rel="shortcut icon" href="./src/assets/favicon.ico" type="image/x-icon">
+        <meta name="description" content="Control Finance - Seu controle financeiro">
+        <link rel="stylesheet" href="./src/styles/globalStyles.css">
+        <link rel="stylesheet" href="./src/styles/index.css">
+        <script defer src="/scripts/modal.js"></script>
+        <script defer src="valuesData.js"></script>
+        <script defer src="index.js"></script>
+    </head>
+    <body>
+        <header class="topo__pagina">
+            <div class="itens__topo">
+                <h1 class="nome__titulo">
+                    Control
+                    <span class="nome__titulo2">Finance</span>
+                </h1>
+                <button id="registrarValor">Registrar novo valor</button>
+            </div>
+        </header>
+        <main class="container">
+            <section class="secao__financeiro">
+                <h2>Resumo financeiro</h2>
+                <div class="span__filter">
+                    <span>Todos</span>
+                    <span>Entradas</span>
+                    <span>Saidas</span>
+                </div>
+                <div class="campo__soma">
+                    <p>Soma dos valores</p>
+                    <span>R$ 2112,00</span>
+                </div>
+            </section>
+            <section class="lista__valores">
+                <ul class="container__lista">
+                    <li class="lista">
+                        <span>R$ 870,00</span>
+                        <button id="btnEntrada">Entrada</button>
+                        <button id="btnRemove">
+                            <span>
+                                <img src="./src/assets/trash (1).png">
+                            </span>
+                        </button>
+                    </li>
+
+                    <li class="lista">
+                        <span>R$ 70,00</span>
+                        <button id="btnEntrada">Saida</button>
+                        <button id="btnRemove">
+                            <span>
+                                <img src="./src/assets/trash (1).png">
+                            </span>
+                        </button>
+                    </li>
+                </ul>
+            </section>
+        </main>
+    </body>
+</html>
