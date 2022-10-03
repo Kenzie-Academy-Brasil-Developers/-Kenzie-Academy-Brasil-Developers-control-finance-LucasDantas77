@@ -31,8 +31,12 @@ function renderValores(array) {
         spanValor.id = "valor"
 
         spanTipo.id = "btnEntrada"
-        spanTipo.innerText = "entrada"
-       
+        if (element.categoryID === 1) {
+            spanTipo.innerText = valuesCategory[0];
+        } else {
+            spanTipo.innerText = valuesCategory[1]
+        }
+
 
 
 
@@ -82,20 +86,20 @@ function criaModal() {
     form.addEventListener("submit", (event) => {
         event.preventDefault()
         let newUser = {}
-      
+
         const formSubmit = [...event.target]
 
         formSubmit.forEach((element) => {
-           
-            if (element.value && element.name != "tipo") {
-                newUser[element.name] = element.value
+
+            if (element.value && element.type != "radio") {
+                newUser[element.name] = parseInt(element.value)
             } else if (element.checked) {
-                newUser[element.name] = element.value
+                newUser[element.name] = parseInt(element.value)
             }
         })
+       
         insertedValues.push(newUser)
         console.log(insertedValues)
-
         renderValores(insertedValues)
 
     })
@@ -112,9 +116,9 @@ function criaModal() {
     inputEntrada.classList.add("input__label")
     inputEntrada.checked = true
     inputEntrada.id = "entrada"
-    inputEntrada.name = "tipo"
+    inputEntrada.name = "categoryID"
     inputEntrada.type = "radio"
-    inputEntrada.value = "Entrada"
+    inputEntrada.value = 1
 
     const labelEntrada = document.createElement("label")
     labelEntrada.classList.add("label__1")
@@ -123,11 +127,11 @@ function criaModal() {
 
     const inputSaida = document.createElement("input")
     inputSaida.classList.add("input__label")
-   
+
     inputSaida.id = "saida"
-    inputSaida.name = "tipo"
+    inputSaida.name = "categoryID"
     inputSaida.type = "radio"
-    inputSaida.value = "Saída"
+    inputSaida.value = 2
 
 
     const labelSaida = document.createElement("label")
@@ -140,6 +144,7 @@ function criaModal() {
     const btnCancelar = document.createElement("button")
     btnCancelar.setAttribute("data", "modal")
     btnCancelar.innerText = "Cancelar"
+   
     const btnInserir = document.createElement("button")
     btnInserir.id = "inserir"
     btnInserir.innerText = "Inserir valor"
@@ -168,6 +173,32 @@ function abrirModal() {
     }
 }
 abrirModal()
+
+
+function filtraValores() {
+
+    const spanTodos = document.getElementById("todos")
+    spanTodos.addEventListener("click", () => {
+        renderValores(insertedValues)
+    })
+
+    const spanEntrada = document.getElementById("entradas")
+    spanEntrada.addEventListener("click", () => {
+       const insertedValuesFiltered = insertedValues.filter(element => element.categoryID === 1)
+        renderValores(insertedValuesFiltered)
+    })
+
+    const spanSaida = document.getElementById("saidas")
+    spanSaida.addEventListener("click", () => {
+      const  insertedValuesFiltered = insertedValues.filter(element => element.categoryID === 2)
+        renderValores(insertedValuesFiltered)
+    })
+
+
+}
+filtraValores()
+
+
 
 
 function somarValores() {
