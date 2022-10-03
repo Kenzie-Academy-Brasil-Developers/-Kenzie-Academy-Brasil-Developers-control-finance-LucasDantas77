@@ -20,6 +20,7 @@
     border: 1.5px solid var(--color-brand-1);
     padding: 3px;
     font-size: var(--font-size-3);
+    cursor: pointer;
 }
 
 .nome__titulo {
@@ -59,6 +60,7 @@
     font-size: var(--font-size-4);
     font-weight: var(--font-weigth-1);
     padding: 3px 14px;
+    cursor: pointer;
 
 }
 
@@ -68,12 +70,34 @@
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-    margin: 2rem 2rem 0 0;
+    margin: 2rem 3rem 0 0;
     padding: 14px 16px;
     background-color: var(--color-grey-4);
     border-radius: var(--radius-2);
     font-size: var(--font-size-4);
     font-weight: var(--font-weigth-2);
+}
+
+.campo__valores {
+    display: flex;
+    width: 100%;
+    max-width: 638px;
+    justify-content: center;
+    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+    border: solid 1px var(--color-grey-1);
+    border-radius: var(--radius-1);
+    background-color: var(--color-grey-4);
+    padding: 18px;
+}
+
+.campo__valores>h2 {
+    font-size: 1rem;
+}
+
+.campo__valores>p {
+    font-size: 0.9rem;
 }
 
 .lista__valores {
@@ -89,7 +113,8 @@
 .lista {
     display: flex;
     justify-content: space-between;
-    width: 98%;
+    width: 100%;
+    max-width: 640px;
     background-color: var(--fixed-white);
     border: 1.5px solid #F1F3F5;
     border-radius: var(--radius-2);
@@ -99,8 +124,23 @@
 .lista>span {
     font-size: var(--font-size-4);
     font-weight: var(--font-weigth-2);
-    line-height: 25px;
+    align-items: center;
 
+}
+
+#valor {
+    line-height: 30px;
+
+}
+
+#btnEntrada {
+    border-radius: var(--radius-2);
+    background-color: var(--color-grey-4);
+    border: solid 1px var(--color-grey-4);
+    margin: 2px 0 2px 0;
+    padding: 0px 7px;
+    line-height: 25px;
+   
 }
 
 .lista>button {
@@ -111,7 +151,7 @@
     margin: 2px 0 2px 0;
     font-size: var(--font-size-4);
     font-weight: var(--font-weigth-2);
-
+    cursor: pointer;
 }
 
 @media(min-width:768px) {
@@ -127,6 +167,6 @@
 
     .secao__financeiro>h2 {
         position: absolute;
-        top: 98px;
+        top: 80px;
     }
 }

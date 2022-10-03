@@ -1,0 +1,156 @@
+.container__modal {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    transition: 1s ease;
+}
+
+.modal {
+    width: 85%;
+    height: 68%;
+    background-color: var(--color-white-fixed);
+    border: none;
+    background-color: var(--color-grey-4);
+    animation: animateModal 1s ease;
+    margin: 2rem 0 0 0.5rem;
+    border-radius: 4px;
+
+}
+
+.modal__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 15px
+}
+
+.modal__header>h2 {
+    font-size: var(--font-size-3);
+}
+
+.modal__header>button {
+    background-color: var(--color-grey-3);
+    border: 1px solid var(--color-grey-3);
+    font-size: var(--font-size-4);
+    border-radius: 4px;
+    padding: 1px 5px;
+    cursor: pointer;
+}
+
+.modal__body {
+    background-color: var(--color-white-fixed);
+    width: 100%;
+    max-width: 761px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 24px 24px;
+}
+
+.modal__body>p {
+    font-size: var(--font-size-4);
+    font-weight: var(--font-weight-1);
+    line-height: 15px;
+
+}
+
+.form__usuario {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form__usuario>p {
+    font-size: var(--font-size-4);
+    font-weight: var(--font-weight-1);
+
+}
+
+.form__usuario>input {
+    border-radius: var(--radius-2);
+    border: solid 1px var(--color-grey-3);
+    padding: 6px;
+
+}
+
+.input__label {
+    display: none4;
+    position: relative;
+    top: 38px;
+}
+
+.label__1 {
+    border-radius: var(--radius-2);
+    border: solid 1px var(--color-grey-3);
+    padding: 6px;
+    text-align: center;
+    font-size: var(--font-size-4);
+    cursor: pointer;
+
+
+
+}
+
+.btnTipos {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 1rem;
+}
+
+.btnTipos>button {
+    border-radius: var(--radius-2);
+    border: solid 1px var(--color-grey-3);
+    padding: 3px 7px;
+    cursor: pointer;
+}
+
+#inserir {
+    background-color: var(--color-brand-1);
+    color: var(--fixed-white);
+}
+
+.show__modal {
+    display: flex;
+}
+
+@media(min-width:768px) {
+    .modal {
+        width: 450px;
+        height: 350px;
+    }
+
+    .modal__body {
+        width: 450px;
+        height: 350px;
+    }
+
+    .modal__body>button {
+        position: absolute;
+        bottom: 430px;
+        left: 865px;
+
+    }
+
+}
+
+
+@keyframes animateModal {
+    0% {
+        transform: translateY(-50%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

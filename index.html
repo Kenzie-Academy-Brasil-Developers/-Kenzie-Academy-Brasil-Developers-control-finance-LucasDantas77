@@ -9,9 +9,10 @@
         <meta name="description" content="Control Finance - Seu controle financeiro">
         <link rel="stylesheet" href="./src/styles/globalStyles.css">
         <link rel="stylesheet" href="./src/styles/index.css">
-        <script defer src="/scripts/modal.js"></script>
-        <script defer src="valuesData.js"></script>
-        <script defer src="index.js"></script>
+        <link rel="stylesheet" href="./src/styles/modal.css">
+        <script defer src="./src/scripts/valuesData.js"></script>
+        <script defer src="./src/scripts/index.js"></script>
+        <script defer src="./src/scripts/modal.js"></script>
     </head>
     <body>
         <header class="topo__pagina">
@@ -20,7 +21,7 @@
                     Control
                     <span class="nome__titulo2">Finance</span>
                 </h1>
-                <button id="registrarValor">Registrar novo valor</button>
+                <button data="modal">Registrar novo valor</button>
             </div>
         </header>
         <main class="container">
@@ -33,30 +34,15 @@
                 </div>
                 <div class="campo__soma">
                     <p>Soma dos valores</p>
-                    <span>R$ 2112,00</span>
+                    <span id ="soma"></span>
                 </div>
             </section>
             <section class="lista__valores">
                 <ul class="container__lista">
-                    <li class="lista">
-                        <span>R$ 870,00</span>
-                        <button id="btnEntrada">Entrada</button>
-                        <button id="btnRemove">
-                            <span>
-                                <img src="./src/assets/trash (1).png">
-                            </span>
-                        </button>
-                    </li>
-
-                    <li class="lista">
-                        <span>R$ 70,00</span>
-                        <button id="btnEntrada">Saida</button>
-                        <button id="btnRemove">
-                            <span>
-                                <img src="./src/assets/trash (1).png">
-                            </span>
-                        </button>
-                    </li>
+                    <div class="campo__valores">
+                        <h2>Nenhum valor cadastrado</h2>
+                        <p>registrar novo valor</p>
+                    </div>
                 </ul>
             </section>
         </main>
