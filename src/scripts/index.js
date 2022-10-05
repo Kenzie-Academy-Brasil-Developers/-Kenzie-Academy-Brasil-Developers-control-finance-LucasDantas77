@@ -1,7 +1,5 @@
 const ul = document.querySelector(".container__lista")
 const body = document.querySelector("body")
-const newSoma = []
-const campoSoma = document.getElementById("soma")
 const resultadoSoma = document.getElementById("soma")
 
 
@@ -207,6 +205,7 @@ function somarValores() {
 
     }, 0)
     resultadoSoma.innerText = soma
+   
 
 }
 somarValores()
